@@ -17,7 +17,9 @@ options = Options()
 # options.add_argument("--headless")
 arrival_input_id = "container-widget-hero_ArrivalDate"
 arrival_date = "5/30/2024"
+depart_input_id = "container-widget-hero_DepartureDate"
 depart_date = "6/2/2024"
+submit_button_name = "wxa-form-button-submit"
 
 
 driver = webdriver.Chrome(
@@ -29,5 +31,15 @@ driver.get(url)
 sleep(5)
 
 arrival_input_element = driver.find_element(By.ID, arrival_input_id)
-print(arrival_input_element.get_attribute("name"))
-# arrival_input_element.send_keys(arrival_date)
+arrival_input_element.clear()
+arrival_input_element.send_keys(arrival_date)
+
+depart_input_element = driver.find_element(By.ID, depart_input_id)
+depart_input_element.clear()
+depart_input_element.send_keys(depart_date)
+
+sleep(5)
+submit_button_element = driver.find_element(By.NAME, submit_button_name)
+submit_button_element.click()
+
+sleep(5)
