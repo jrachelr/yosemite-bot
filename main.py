@@ -20,12 +20,12 @@ options = Options()
 # options.add_argument("--headless")
 arrival_input_id = "container-widget-hero_ArrivalDate"
 depart_input_id = "container-widget-hero_DepartureDate"
-# arrival_date = "5/30/2024"
-# depart_date = "6/2/2024"
+arrival_date = "5/30/2024"
+depart_date = "6/2/2024"
 
 # test  dates_available = True
-arrival_date = "4/22/2024"
-depart_date = "4/23/2024"
+# arrival_date = "4/22/2024"
+# depart_date = "4/23/2024"
 
 submit_button_xpath = (
     "/html/body/div[9]/div/div/div/div[2]/div[2]/div/form/div[10]/input"
