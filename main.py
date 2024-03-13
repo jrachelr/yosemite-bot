@@ -14,10 +14,10 @@ load_dotenv()
 
 
 # params
-# booking dates 30 May - 2 June
 url = "https://www.travelyosemite.com/lodging/housekeeping-camp"
 options = Options()
-# options.add_argument("--headless")
+# comment line below to see process
+options.add_argument("--headless")
 arrival_input_id = "container-widget-hero_ArrivalDate"
 depart_input_id = "container-widget-hero_DepartureDate"
 arrival_date = "5/30/2024"
@@ -62,6 +62,7 @@ def check_availability():
     wait = WebDriverWait(driver, timeout=5)
 
     try:
+        # wait until available dates element loads
         avail_dates_element = wait.until(
             EC.visibility_of_element_located((By.XPATH, avail_dates_xpath))
         )
